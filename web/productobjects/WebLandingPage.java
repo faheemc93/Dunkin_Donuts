@@ -9,6 +9,7 @@ public class WebLandingPage extends WebBasePage {
 	//Contains all category xpaths in menu. ex "Espresso & Coffee"
 	String menuCategoriesXpaths = "//button[@class='product-menu__category__list__item__button']";
 	
+	//The below strings contain all xpaths to category items
 	String espressoCoffeeMenuCategoryXpath;
 	String teasMoreMenuCategoryXpath;
 	String frozenDrinksMenuCategoryXpath;
