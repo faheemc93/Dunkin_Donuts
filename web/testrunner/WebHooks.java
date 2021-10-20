@@ -1,5 +1,5 @@
 package testrunner;
 
-public class Hooks {
+public class WebHooks {
 
 }
