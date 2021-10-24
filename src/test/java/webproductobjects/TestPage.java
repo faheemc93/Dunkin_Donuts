@@ -1,4 +1,4 @@
-package productobjects;
+package webproductobjects;
 
 import org.openqa.selenium.WebDriver;
 
