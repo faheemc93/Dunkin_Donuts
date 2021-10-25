@@ -13,7 +13,7 @@ public class Hooks {
 	@BeforeMethod (alwaysRun=true)
 	public void setup() {
 		
-		String url = "https://www.saucedemo.com";
+		String url = "https://www.dunkindonuts.com";
 		
 		String pathToDriver = System.getProperty("user.dir") + "/src/test/resources/chromedriver";
 		System.setProperty("webdriver.chrome.driver", pathToDriver);
