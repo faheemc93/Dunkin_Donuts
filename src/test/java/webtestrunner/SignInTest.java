@@ -7,8 +7,8 @@ import webproductobjects.signInPage;
 
 public class SignInTest extends Hooks {
 	
-	@Test
-	public void test() throws InterruptedException {
+	@Test(enabled=false)
+	public void signIn() throws InterruptedException {
 		
 		try {
 			Thread.sleep(5000);
