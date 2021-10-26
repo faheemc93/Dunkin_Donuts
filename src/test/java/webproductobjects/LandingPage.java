@@ -24,8 +24,7 @@ public class LandingPage extends BasePage {
 	String sandwichesMoreMenuCatXpath = "//button[@class='product-menu__category__list__item__button' and xpath='3']";
 	String snacksWrapsMenuCatXpath = "//button[@class='product-menu__category__list__item__button' and xpath='4']";
 	String bagelsMuffinsMenuCatXpath = "//button[@class='product-menu__category__list__item__button' and xpath='5']";
-	String donutsMenuCat = "//button[@class='product-menu__category__list__item__button' and xpath='6']";
-	String espressoCoffeeMenuCat = "//button[@class='product-menu__category__list__item__button' and xpath='7']";
+	String donutsMenuCatXpath = "//button[@class='product-menu__category__list__item__button' and xpath='6']";
 
 
 	//The below strings contain all xpaths to category items
