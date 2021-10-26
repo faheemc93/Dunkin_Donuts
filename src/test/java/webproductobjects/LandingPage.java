@@ -16,12 +16,6 @@ public class LandingPage extends BasePage {
 		put("dunkinCard", "//p[@class='global-nav__header' and @xpath='5']");
 		put("shop", "//p[@class='global-nav__header' and @xpath='6']");
 	}};
-	public String navbarMenuXpath = "//p[@class='global-nav__header' and @xpath='1']";
-	String navbarLocationsXpath = "//p[@class='global-nav__header' and @xpath='2']";
-	String navbarDeliveryXpath = "//p[@class='global-nav__header' and @xpath='3']";
-	String navbarDdPerksXpath = "//p[@class='global-nav__header' and @xpath='4']";
-	String navbarDunkinCardXpath = "//p[@class='global-nav__header' and @xpath='5']";
-	String navbarShop = "//p[@class='global-nav__header' and @xpath='6']";
 
 	//Contains all category xpaths in menu. ex "Espresso & Coffee"
 	String espressoCoffeeMenuCatXpath = "//button[@class='product-menu__category__list__item__button product-menu__category__list__item__button--active' and @xpath='1']";
