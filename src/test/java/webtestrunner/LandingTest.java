@@ -9,10 +9,10 @@ import webproductobjects.signInPage;
 public class LandingTest extends Hooks {
 
 	@Test
-	public void test() {
+	public void test() throws InterruptedException {
 		
 		try {
-			Thread.sleep(15000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -24,8 +24,13 @@ public class LandingTest extends Hooks {
 		signInPage signInPage = new signInPage(driver);
 		
 		landingPage.click(landingPage.signInButton);
-		landingPage.input(signInPage.emailField, "syedishmam17@gmail.com");
-		landingPage.input(signInPage.passwordField, "R3mdunk!");
+		
+		signInPage.input(signInPage.emailField, "syedishmam17@gmail.com");
+		signInPage.input(signInPage.passwordField, "DunkinTesting123!?");
+		signInPage.click("//input[@type='submit']");
+		
+		Thread.sleep(15000);
+		//Sleep to handle Captcha manually
 	}
 	
 }
