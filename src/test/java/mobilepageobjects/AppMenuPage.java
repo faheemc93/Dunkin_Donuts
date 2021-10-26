@@ -9,6 +9,12 @@ public class AppMenuPage extends AppBasePage{
     private String sandwichBtn = "SANDWICHES & WRAPSButton";
     private String donutsBtn = "DONUTS & BAKERYButton";
     private String featuredCategoriesBtns = "new UiSelector().className(\"android.widget.TextView\")";
+
+    //following path is universal for all featured categories
+    private String productListFeatured = "new UiSelector().className(\"android.widget.LinearLayout\")";
+
+    private String startOrderBtn = "new UiSelector().className(\"android.widget.TextView\").textContains(\"START ORDER\")";
+
     //private String everythingPumpkinsBtn = "new UiSelector().className(\"android.widget.TextView\").textContains(\"Everything Pumpkin\")";
     //private String halloweenBtn = "new UiSelector().className(\"android.widget.TextView\").textContains(\"Halloween Treats\")";
     //private String fallFlavorsBtn = "new UiSelector().className(\"android.widget.TextView\").textContains(\"Flavors of Fall\")";
