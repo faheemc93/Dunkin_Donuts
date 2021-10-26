@@ -6,6 +6,8 @@ import java.util.Map;
 import org.openqa.selenium.WebDriver;
 
 public class LandingPage extends BasePage {
+	
+	public String signInButton = "//a[@class='u-cta u-cta-primary js-signin-btn']";
 
 	//Contains all options in navbar
 	public Map<String, String> menuItems = new HashMap<>() {{

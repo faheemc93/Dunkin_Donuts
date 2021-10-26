@@ -21,13 +21,6 @@ public class Hooks {
 		driver = new ChromeDriver();
 		driver.get(url);
 		
-		try {
-			Thread.sleep(8000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 	}
 	
 	@AfterMethod (alwaysRun=true)
