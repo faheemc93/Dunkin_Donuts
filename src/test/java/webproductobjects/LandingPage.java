@@ -8,7 +8,15 @@ import org.openqa.selenium.WebDriver;
 public class LandingPage extends BasePage {
 
 	//Contains all options in navbar
-	String navbarMenuXpath = "//p[@class='global-nav__header' and @xpath='1']";
+	public Map<String, String> menuItems = new HashMap<>() {{
+		put("menu", "//p[@class='global-nav__header' and @xpath='1']");
+		put("location", "//p[@class='global-nav__header' and @xpath='2']");
+		put("delivery", "//p[@class='global-nav__header' and @xpath='3']");
+		put("ddPerks", "//p[@class='global-nav__header' and @xpath='4']");
+		put("dunkinCard", "//p[@class='global-nav__header' and @xpath='5']");
+		put("shop", "//p[@class='global-nav__header' and @xpath='6']");
+	}};
+	public String navbarMenuXpath = "//p[@class='global-nav__header' and @xpath='1']";
 	String navbarLocationsXpath = "//p[@class='global-nav__header' and @xpath='2']";
 	String navbarDeliveryXpath = "//p[@class='global-nav__header' and @xpath='3']";
 	String navbarDdPerksXpath = "//p[@class='global-nav__header' and @xpath='4']";

@@ -11,11 +11,11 @@ public abstract class BasePage {
 		this.driver = driver;
 	}
 	
-	protected void input(String xpath, String query) {
+	public void input(String xpath, String query) {
 		driver.findElement(By.xpath(xpath)).sendKeys(query);
 	}
 	
-	protected void click(String xpath) {
+	public void click(String xpath) {
 		driver.findElement(By.xpath(xpath)).click();
 	}
 
