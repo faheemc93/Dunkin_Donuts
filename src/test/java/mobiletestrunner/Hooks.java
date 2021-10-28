@@ -18,7 +18,7 @@ public class Hooks {
 	@BeforeMethod(alwaysRun=true)
 	public void setup() throws MalformedURLException {
 
-		String path = "/Users/syedrahman/Desktop/workspace/appium/apk-files/dunkin.apk";
+		String path = System.getProperty("user.dir").concat("/src/test/resources/dunkin.apk");
 		String url = "http://127.0.0.1:4723/wd/hub";
 		
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
