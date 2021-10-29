@@ -1,5 +1,7 @@
 package mobilepageobjects;
 
+import org.openqa.selenium.Keys;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 
@@ -32,10 +34,11 @@ public class BasePage {
 
 	public void sendQuery(String selector, String query) {
 		driver.findElement(MobileBy.AndroidUIAutomator(selector)).sendKeys(query);
+		//driver.findElement(MobileBy.AndroidUIAutomator(selector)).sendKeys(Keys.ENTER);
 	}
 	
 	public void acceptPrompt() {
-		sleep(2000);
 		driver.switchTo().alert().accept();
 	}
+	
 }

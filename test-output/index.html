@@ -134,8 +134,8 @@ Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, tim
 System info: host: &apos;Syeds-MBP-2.lan&apos;, ip: &apos;2603:7000:8f40:2d10:0:0:0:12e9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.5&apos;, java.version: &apos;16.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: /Users/syedrahman/Desktop/g..., appPackage: com.dunkinbrands.otgo, databaseEnabled: false, desired: {app: /Users/syedrahman/Desktop/g..., deviceName: Pixel_3a, platformName: android, platformVersion: 11, resetKeyboard: true, unicodeKeyboard: true}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2220, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, resetKeyboard: true, statBarHeight: 66, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2022, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: deae21ad-3931-4e22-8934-ba51c6f6dd2e
-*** Element info: {Using=accessibility id, value=acceptButton}
+Session ID: 97026c80-e119-4eb6-a739-f6692cb1612d
+*** Element info: {Using=-android uiautomator, value=new UiSelector().className(&quot;android.widget.Button&quot;).textContains(&quot;ENABLE LOCATION SERVICES&quot;)}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -154,14 +154,15 @@ Session ID: deae21ad-3931-4e22-8934-ba51c6f6dd2e
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.FindsByAccessibilityId.findElementByAccessibilityId(FindsByAccessibilityId.java:37)
-	at io.appium.java_client.MobileBy$ByAccessibilityId.findElement(MobileBy.java:284)
+	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:220)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mobilepageobjects.BasePage.click(BasePage.java:15)
-	at mobilepageobjects.LandingPage.startingFlow(LandingPage.java:15)
+	at mobilepageobjects.BasePage.uiSelector(BasePage.java:32)
+	at mobilepageobjects.LandingPage.enableLocationServices(LandingPage.java:21)
+	at mobilepageobjects.LandingPage.startingFlow(LandingPage.java:35)
 	at mobiletestrunner.LandingPageTest.Test1(LandingPageTest.java:13)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
@@ -197,7 +198,7 @@ Session ID: deae21ad-3931-4e22-8934-ba51c6f6dd2e
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/79/_sdch_wn4xd98dg3xc06m1_m0000gn/T/testng-eclipse-896321165/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/79/_sdch_wn4xd98dg3xc06m1_m0000gn/T/testng-eclipse--2053731266/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -254,12 +255,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test1')
 data.setCell(0, 2, 'mobiletestrunner.LandingPageTest')
-data.setCell(0, 3, 13427);
+data.setCell(0, 3, 14937);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -294,11 +295,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Test1</span>
-                <span class="method-start">8240 ms</span>
+                <span class="method-start">9239 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21670 ms</span>
+                <span class="method-start">24179 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
