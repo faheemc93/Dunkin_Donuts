@@ -4,8 +4,6 @@ import io.appium.java_client.AppiumDriver;
 
 public class LocationPage extends BasePage{
 	
-	private String selectLocationButton = "Select a location";
-
 	public LocationPage(AppiumDriver driver) {
 		super(driver);
 	}
@@ -24,10 +22,8 @@ public class LocationPage extends BasePage{
 	
 	public void locationFlow() {
 		
-		click(selectLocationButton);
 		enableLocationServices();
 		acceptPrompt();
 		searchLocation("queens new york");
-		
 	}
 }

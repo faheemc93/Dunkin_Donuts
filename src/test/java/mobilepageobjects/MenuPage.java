@@ -1,25 +1,24 @@
 package mobilepageobjects;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import io.appium.java_client.AppiumDriver;
 
 public class MenuPage extends BasePage{
 	
-	private String navigationMenu = "Main Navigation Menu";
-
+	//Contains all options on the menu page
+	public Map<String, String> menuPageItems = new HashMap<>() {{
+		put("", "");
+		put("", "");
+		put("", "");
+		put("", "");
+		put("", "");
+		put("", "");
+	}};
+	
 	public MenuPage(AppiumDriver driver) {
 		super(driver);
 	}
 	
-	public void menuButton() {
-		String selector = "new UiSelector().className(\"android.widget.TextView\").textContains(\"MENU\")";
-		uiSelector(selector);
-	}
-	
-	public void menuFlow() {
-		
-		click(navigationMenu);
-		menuButton();
-		
-	}
-
 }

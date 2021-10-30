@@ -10,7 +10,7 @@ public class LocationTest extends Hooks{
 	@Test
 	public void Test1() {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.landingFlow();
+		landingPage.locationMenuFlow();
 		
 		LocationPage locationPage = new LocationPage(driver);
 		locationPage.locationFlow();
