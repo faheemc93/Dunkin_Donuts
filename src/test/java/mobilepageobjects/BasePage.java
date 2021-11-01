@@ -38,6 +38,7 @@ public class BasePage {
 	}
 	
 	public void acceptPrompt() {
+		sleep(2000);
 		driver.switchTo().alert().accept();
 	}
 	

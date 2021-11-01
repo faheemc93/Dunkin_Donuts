@@ -14,9 +14,9 @@ public class MenuTest extends Hooks{
 		landingPage.navigationMenuFlow();
 		
 		MenuPage menuPage = new MenuPage(driver);
-		menuPage.icedDrinksMenuFlow();
+		menuPage.hotDrinksMenuFlow();
 		
-		//LocationPage locationPage = new LocationPage(driver);
-		//locationPage.locationFlow();		
+		LocationPage locationPage = new LocationPage(driver);
+		locationPage.locationFlow();		
 	}
 }

@@ -53,6 +53,12 @@ public class MenuPage extends BasePage{
 		put("iced tea", "new UiSelector().className(\"android.widget.TextView\").textContains(\"ICED TEA\")");
 	}};
 	
+	public Map<String, String> hotDrinksItems = new HashMap<>() {{
+		put("original blend", "new UiSelector().className(\"android.widget.TextView\").textContains(\"ORIGINAL BLEND\")");
+		put("dunkin midnight", "new UiSelector().className(\"android.widget.TextView\").textContains(\"DUNKIN' MIDNIGHT\")");
+		put("100% guatemalan", "new UiSelector().className(\"android.widget.TextView\").textContains(\"100% GUATEMALAN\")");
+	}};
+		
 	public MenuPage(AppiumDriver driver) {
 		super(driver);
 	}
@@ -61,6 +67,11 @@ public class MenuPage extends BasePage{
 		click(categoryItems.get("iced drinks"));
 		uiSelector(icedDrinksItems.get("cold brew"));
 		//driver.findElement(MobileBy.AndroidUIAutomator(coldBrew)).click();
-
+	}
+	
+	public void hotDrinksMenuFlow() {
+		click(categoryItems.get("hot drinks"));
+		uiSelector(hotDrinksItems.get("dunkin midnight"));
+		uiSelector(startOrder);
 	}
 }
