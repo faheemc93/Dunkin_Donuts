@@ -14,6 +14,7 @@ import mobilepageobjects.SignUpFormPage;
 
 public class SignUpTest extends Hooks {
 	
+	//Test case for inputting credentials into sign up form. Does not complete registration to avoid flags
 	@Test(dataProvider = "sign-up-creds")
 	public void signUpTest(
 				String firstName,
@@ -49,6 +50,7 @@ public class SignUpTest extends Hooks {
 		
 	}
 	
+	//Credentials for signing up 
 	@DataProvider(name = "sign-up-creds")
 	public Object[][] dpMethod() {
 		Object data[][] = {
