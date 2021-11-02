@@ -14,9 +14,7 @@ public class MenuTest extends Hooks{
 		landingPage.navigationMenuFlow();
 		
 		MenuPage menuPage = new MenuPage(driver);
-		menuPage.hotDrinksMenuFlow();
-		
-		LocationPage locationPage = new LocationPage(driver);
-		locationPage.locationFlow();		
+		//This will take you to the item of your choice based on the category and the specific item you enter
+		menuPage.menuFlow("hot drinks", "original blend");		
 	}
 }
