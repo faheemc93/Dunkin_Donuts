@@ -18,6 +18,18 @@ public class BasePage {
 		
 	}
 	
+	public void input(String selector) {
+		driver.findElement(MobileBy.AccessibilityId(selector)).click();
+	}
+	
+	public void clickTargetUiSelector(String selector) {
+		driver.findElement(MobileBy.AndroidUIAutomator(selector)).click();
+	}
+
+	public void inputToTargetUiSelector(String selector, String query) {
+		driver.findElement(MobileBy.AndroidUIAutomator(selector)).sendKeys(query);
+	}
+	
 	public void sleep(int time) {
 		
 		try {
@@ -26,14 +38,6 @@ public class BasePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-	
-	public void uiSelector(String selector) {
-		driver.findElement(MobileBy.AndroidUIAutomator(selector)).click();
-	}
-
-	public void sendQuery(String selector, String query) {
-		driver.findElement(MobileBy.AndroidUIAutomator(selector)).sendKeys(query);
 	}
 	
 	public void acceptPrompt() {
