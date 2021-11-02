@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class LandingPageTest extends Hooks{
 	
-	@Test
+	@Test(enabled = false)
 	public void Test1( ) {
 		
 	}
