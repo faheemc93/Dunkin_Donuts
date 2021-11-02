@@ -8,8 +8,6 @@ import io.appium.java_client.MobileBy;
 
 public class MenuPage extends BasePage{
 	
-	String startOrder = "new UiSelector().className(\"android.widget.TextView\").textContains(\"START ORDER\")";
-	
 	//Contains all featured options at the top of the menu page
 	public Map<String, String> featuredItems = new HashMap<>() {{
 		put("", "");
@@ -142,6 +140,7 @@ public class MenuPage extends BasePage{
 		}
 		
 		//Starts order flow based on the chosen category and associated menu item available in that category. 
+		String startOrder = "new UiSelector().className(\"android.widget.TextView\").textContains(\"START ORDER\")";
 		uiSelector(startOrder);
 	}
 }
