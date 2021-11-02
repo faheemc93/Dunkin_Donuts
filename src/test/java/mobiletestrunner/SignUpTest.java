@@ -41,9 +41,10 @@ public class SignUpTest extends Hooks {
 		driver.findElement(MobileBy.AndroidUIAutomator(signUp.mobileNumberFieldSelector)).sendKeys(mobile);
 		driver.findElement(MobileBy.AndroidUIAutomator(signUp.zipCodeFieldSelector)).sendKeys(zipCode);
 		
-		signUp.scroll(100, 100, 200, 200);
+		signUp.scroll(500, 500, 500, 100);
 		
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.checkBoxButtonSelector));
+		Thread.sleep(3000);
+		driver.findElement(MobileBy.AndroidUIAutomator(signUp.checkBoxButtonSelector)).click();
 		
 		
 	}
@@ -55,7 +56,7 @@ public class SignUpTest extends Hooks {
 					"Syed", 
 					"Ishmam",
 					"test@codeboost.com",
-					"Codeboost123",
+					"Codeboost123!",
 					"(123) 456-7890",
 					"12345"
 				}

@@ -10,7 +10,7 @@ public class SignUpFormPage extends BasePage {
 	public String passwordFieldSelector = "new UiSelector().className(\"android.widget.EditText\").text(\"Password\")";
 	public String mobileNumberFieldSelector = "new UiSelector().className(\"android.widget.EditText\").text(\"Mobile Number\")";
 	public String zipCodeFieldSelector = "new UiSelector().className(\"android.widget.EditText\").text(\"Zip Code (Optional)\")";
-	public String checkBoxButtonSelector = "new UiSelector().className(\"android.widget.CheckBox\")";
+	public String checkBoxButtonSelector = "new UiSelector().className(\"android.widget.CheckBox\").index(0)";
 	
 	public SignUpFormPage(AppiumDriver driver) {
 		super(driver);
