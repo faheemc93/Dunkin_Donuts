@@ -2,6 +2,8 @@ package mobilepageobjects;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class BasePage {
 	
@@ -37,5 +39,10 @@ public class BasePage {
 	public void acceptPrompt() {
 		sleep(2000);
 		driver.switchTo().alert().accept();
+	}
+	
+	public void scroll(int fromX, int fromY, int toX, int toY) {
+	    TouchAction touchAction = new TouchAction(driver);
+	    touchAction.longPress(PointOption.point(fromX, fromY)).moveTo(PointOption.point(toX, toY)).release().perform();
 	}
 }

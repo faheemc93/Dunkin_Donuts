@@ -1,5 +1,8 @@
 package mobiletestrunner;
 
+import java.util.HashMap;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -38,10 +41,9 @@ public class SignUpTest extends Hooks {
 		driver.findElement(MobileBy.AndroidUIAutomator(signUp.mobileNumberFieldSelector)).sendKeys(mobile);
 		driver.findElement(MobileBy.AndroidUIAutomator(signUp.zipCodeFieldSelector)).sendKeys(zipCode);
 		
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.checkBoxButtonSelector));
+		signUp.scroll(100, 100, 200, 200);
 		
-		TouchAction touchAction = new TouchAction(driver);
-		touchAction.press(PointOption.point(100, 100)).moveTo(PointOption.point(200, 200));
+		driver.findElement(MobileBy.AndroidUIAutomator(signUp.checkBoxButtonSelector));
 		
 		
 	}
