@@ -9,7 +9,6 @@ import io.appium.java_client.MobileBy;
 public class MenuPage extends BasePage{
 	
 	String startOrder = "new UiSelector().className(\"android.widget.TextView\").textContains(\"START ORDER\")";
-	String coldBrew = "new UiSelector().className(\"android.widget.TextView\").textContains(\"COLD BREW\")";
 	
 	//Contains all featured options on the menu page
 	public Map<String, String> featuredItems = new HashMap<>() {{
@@ -66,7 +65,6 @@ public class MenuPage extends BasePage{
 	public void icedDrinksMenuFlow() {
 		click(categoryItems.get("iced drinks"));
 		uiSelector(icedDrinksItems.get("cold brew"));
-		//driver.findElement(MobileBy.AndroidUIAutomator(coldBrew)).click();
 	}
 	
 	public void hotDrinksMenuFlow() {
