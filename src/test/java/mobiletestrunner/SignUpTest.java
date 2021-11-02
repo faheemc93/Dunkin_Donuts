@@ -35,19 +35,17 @@ public class SignUpTest extends Hooks {
 		String signUpSelector = "new UiSelector().className(\"android.widget.Button\").textContains(\"SIGN UP\")";
 		driver.findElement(MobileBy.AndroidUIAutomator(signUpSelector)).click();
 		
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.firstNameFieldSelector)).sendKeys(firstName);
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.lastNameFieldSelector)).sendKeys(lastName);
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.emailAddressFieldSelector)).sendKeys(email);
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.passwordFieldSelector)).sendKeys(password);
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.mobileNumberFieldSelector)).sendKeys(mobile);
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.zipCodeFieldSelector)).sendKeys(zipCode);
+		signUp.inputToTargetUiSelector(signUp.firstNameFieldSelector, firstName);
+		signUp.inputToTargetUiSelector(signUp.lastNameFieldSelector, lastName);
+		signUp.inputToTargetUiSelector(signUp.emailAddressFieldSelector, email);
+		signUp.inputToTargetUiSelector(signUp.passwordFieldSelector, password);
+		signUp.inputToTargetUiSelector(signUp.mobileNumberFieldSelector, mobile);
+		signUp.inputToTargetUiSelector(signUp.zipCodeFieldSelector, zipCode);
 		
 		signUp.scroll(500, 500, 500, 100);
 		
 		Thread.sleep(3000);
-		driver.findElement(MobileBy.AndroidUIAutomator(signUp.checkBoxButtonSelector)).click();
-		
-		
+		signUp.clickTargetUiSelector(signUp.checkBoxButtonSelector);	
 	}
 	
 	//Credentials for signing up 
