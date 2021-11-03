@@ -105,42 +105,44 @@ public class MenuPage extends BasePage{
 	public MenuPage(AppiumDriver driver) {
 		super(driver);
 	}
-	
+		
 	public void menuFlow(String category, String item) {
 		//Takes the chosen category from all the menu items as an argument and clicks on that category.
 		click(categoryItems.get(category));
-		
 		//Clicks on desired item based on the chosen category.
 		if (category=="iced drinks") {
 			uiSelector(icedDrinksItems.get(item));
 		}
-		else if (category=="hot drinks") {
+		if (category=="hot drinks") {
 			uiSelector(hotDrinksItems.get(item));
 		}
-		else if (category=="sanwiches & wraps") {
+		if (category=="sanwiches & wraps") {
 			uiSelector(sandwiches_wraps.get(item));
 		}
-		else if (category=="donuts & bakery") {
+		if (category=="donuts & bakery") {
 			uiSelector(donuts_bakery.get(item));
 		}
-		else if (category=="frozen drinks") {
+		if (category=="frozen drinks") {
 			uiSelector(frozenDrinks.get(item));
 		}
-		else if (category=="snackin'") {
+		if (category=="snackin'") {
 			uiSelector(snackin.get(item));
 		}
-		else if (category=="brew at home") {
+		if (category=="brew at home") {
 			uiSelector(brewAtHome.get(item));
 		}
-		else if (category=="merch") {
+		if (category=="merch") {
 			uiSelector(merch.get(item));
 		}
-		else if (category=="bottled drinks") {
+		if (category=="bottled drinks") {
 			uiSelector(bottledDrinks.get(item));
 		}
-		
-		//Starts order flow based on the chosen category and associated menu item available in that category. 
+	}
+
+	//Starts order flow based on the chosen category and associated menu item available in that category. 
+	public void startOrder() {
 		String startOrder = "new UiSelector().className(\"android.widget.TextView\").textContains(\"START ORDER\")";
 		uiSelector(startOrder);
 	}
+	
 }
