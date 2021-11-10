@@ -29,5 +29,21 @@ public class LandingPage extends BasePage {
 	public LandingPage(AppiumDriver driver) {
 		super(driver);
 	}
-
+	
+	public void acceptButton() {
+		String selector = "new UiSelector().className(\"android.widget.Button\").textContains(\"ACCEPT\")";
+		uiSelector(selector);
+		sleep(2000);
+	}
+			
+	public void navigationMenuFlow() {
+		acceptButton();
+		click(landingPageItems.get("menu button"));
+		uiSelector(menuSlideItems.get("menu"));
+	}
+	
+	public void locationMenuFlow() {
+		acceptButton();
+		click(landingPageItems.get("location button"));
+	}
 }
