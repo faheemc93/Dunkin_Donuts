@@ -8,7 +8,7 @@ import mobilepageobjects.MenuPage;
 
 public class MenuTest extends Hooks{
 	
-	@Test
+	@Test(enabled=false)
 	public void Test1() {
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.navigationMenuFlow();

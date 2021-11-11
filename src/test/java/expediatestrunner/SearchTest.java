@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import expediaproductobjects.LandingPage;
+import expediaproductobjects.SearchBar;
 
 public class SearchTest extends Hooks {
 	
@@ -26,6 +27,9 @@ public class SearchTest extends Hooks {
 		landing.click(landing.date.replace("[DATE]", "Sat Nov 20 2021 12:00:00 GMT-0500"));
 		landing.click(landing.applyButton);
 		landing.click(landing.searchButton);
+		
+		SearchBar searchBar = new SearchBar(driver);
+		searchBar.singleDestinationQuery("Miami, Florida, United States", "Sat Nov 20 2021 12:00:00 GMT-0500", "Sat Nov 20 2021 12:00:00 GMT-0500", "1", "2", "3");
 		
 	}
 
