@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -44,7 +45,33 @@ public class Hooks {
 		}
 		
 		driver.quit();
-		
 	}
 	
+	//hot drink items
+	@DataProvider(name = "hot drinks")
+	public Object[][] hotDrinks() {
+		Object data[][] = {
+				{"original blend"}, 
+				{"dunkin midnight"},
+				{"holiday blend"},
+				{"signature latte"},
+				{"latte"},
+				{"cappuccino"},
+		};
+		return data;
+	}
+	
+	//cold drink items
+	@DataProvider(name = "iced drinks")
+	public Object[][] coldDrinks() {
+		Object data[][] = {
+				{"original blend iced coffee"}, 
+				{"cold brew"},
+				{"cold brew with sweet cold foam"},
+				{"coconut milk iced latte"},
+				{"iced signature latte"},
+				{"iced latte"},
+		};
+		return data;
+	}
 }

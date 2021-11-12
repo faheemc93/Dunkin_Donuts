@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mobiletestrunner.LandingPageTest">
+      <class name="mobiletestrunner.MenuTest">
         <methods>
-          <include name="Test1"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="coldDrinks" invocation-numbers="1"/>
         </methods>
-      </class> <!-- mobiletestrunner.LandingPageTest -->
+      </class> <!-- mobiletestrunner.MenuTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
