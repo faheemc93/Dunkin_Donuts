@@ -1,35 +1,22 @@
 package expediatestrunner;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
-import expediaproductobjects.LandingPage;
 import expediaproductobjects.SearchBar;
 
 public class SearchTest extends Hooks {
 	
 	@Test(enabled=true)
 	public void test() throws InterruptedException {
-		LandingPage landing = new LandingPage(driver);
-		
-		WebElement goingToField = driver.findElement(By.xpath(landing.goingToFieldXpath));
-		
-		landing.click(landing.goingToFieldXpath);
-		landing.input(landing.goingToFieldXpath, "Miami, Florida, United States");
-		
-		goingToField.sendKeys(Keys.RETURN);
-		Thread.sleep(1000);
-		
-		landing.click("//button[@class='_1yFrqc _1RdfF-']");
-		System.out.println(landing.date.replace("[DATE]", "Sat Nov 20 2021 12:00:00 GMT-0500"));
-		landing.click(landing.date.replace("[DATE]", "Sat Nov 20 2021 12:00:00 GMT-0500"));
-		landing.click(landing.applyButton);
-		landing.click(landing.searchButton);
-		
+
 		SearchBar searchBar = new SearchBar(driver);
-		searchBar.singleDestinationQuery("Miami, Florida, United States", "Sat Nov 20 2021 12:00:00 GMT-0500", "Sat Nov 20 2021 12:00:00 GMT-0500", "1", "2", "3");
+		
+		HashMap<String, ArrayList<Object>> roomsAndGuests = new HashMap<String, ArrayList<Object>>();
+		roomsAndGuests.put(null, null)
+
+		searchBar.singleDestinationQuery("Miami, Florida, United States", "Sat Nov 20 2021", "Fri Nov 26 2021", [2, 4, 4]);
 		
 	}
 

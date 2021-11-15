@@ -6,11 +6,15 @@ import org.openqa.selenium.WebDriver;
 
 public class SearchBar extends BasePage {
 	
-	public String goingToFieldXpath = "//input[@data-stid='sqm-destination']";
-	public String checkInDate = "";
-	public String checkOutDate = "//button[@class='_1yFrqc _1RdfF-']";
-	public String date = "//button[@name='[DATE] (Eastern Standard Time)']";
+	public String destinationField = "//input[@data-stid='sqm-destination']";
+	
+	public String checkInDateButton = "//button[@class='_1yFrqc _1ZtnNu']";
+	public String checkOutDateButton = "//button[@class='_1yFrqc _1RdfF-']";
+	public String date = "//button[@name='[DATE] 12:00:00 GMT-0500 (Eastern Standard Time)']";
 	public String applyButton = "//button[@aria-label='Apply']";
+	
+	public String guestsButton = "//button[@class='_1yFrqc']";
+	
 	public String searchButton = "//button[@aria-label='Search']";
 
 	public SearchBar(WebDriver driver) {
@@ -21,15 +25,53 @@ public class SearchBar extends BasePage {
 		driver.findElement(By.xpath(xpath)).sendKeys(Keys.RETURN);
 	}
 	
-	public void singleDestinationQuery(String destination, String checkInDate, String checkOutDate, String rooms, String adultGuests, String childGuests) {
-		this.click(goingToFieldXpath);
-		this.input(goingToFieldXpath, destination);
-		this.pressEnter(goingToFieldXpath);
+	public void singleDestinationQuery(String destination, String checkInDate, String checkOutDate, int[] roomsAndGuests) {
+		this.click(destinationField);
+		this.input(destinationField, destination);
+		this.pressEnter(destinationField);
 		
-		this.click(checkOutDate);
+		this.click(checkInDateButton);;
+		this.click(date.replace("[DATE]", checkInDate));
 		this.click(date.replace("[DATE]", checkOutDate));
 		this.click(applyButton);
+		
+		this.click(guestsButton);
+		this.click(childGuests);
+		
 		this.click(searchButton);
+	}
+	
+	public void determineGuestSplit(String[] roomOne) {
+
+	}
+	
+	public void determineGuestSplit(String[] roomOne, String[] roomTwo) {
+		
+	}
+	
+	public void determineGuestSplit(String[] roomOne, String[] roomTwo, String[] roomThree) {
+		
+	}
+
+	public void determineGuestSplit(String[] roomOne, String[] roomTwo, String[] roomThree, String[] roomFour) {
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
