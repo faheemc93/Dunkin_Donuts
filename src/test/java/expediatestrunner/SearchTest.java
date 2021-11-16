@@ -14,9 +14,9 @@ public class SearchTest extends Hooks {
 		SearchBar searchBar = new SearchBar(driver);
 		
 		HashMap<String, ArrayList<Object>> roomsAndGuests = new HashMap<String, ArrayList<Object>>();
-		roomsAndGuests.put(null, null)
+		roomsAndGuests.put(null, null);
 
-		searchBar.singleDestinationQuery("Miami, Florida, United States", "Sat Nov 20 2021", "Fri Nov 26 2021", [2, 4, 4]);
+		searchBar.singleDestinationQuery("Miami, Florida, United States", "Sat Nov 20 2021", "Fri Nov 26 2021");
 		
 	}
 
