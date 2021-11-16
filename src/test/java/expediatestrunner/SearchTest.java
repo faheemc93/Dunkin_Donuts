@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import expediaproductobjects.LandingPage;
 import expediaproductobjects.SearchBar;
+import expediaproductobjects.SearchResults;
 
 public class SearchTest extends Hooks {
 	
@@ -13,6 +14,7 @@ public class SearchTest extends Hooks {
 
 		SearchBar searchBar = new SearchBar(driver);
 		LandingPage landing = new LandingPage(driver);
+		SearchResults searchResults = new SearchResults(driver);
 		
 		searchBar.click(landing.overlayCloseButton);
 		if(driver.findElement(By.xpath(landing.overlayCloseButton)).isDisplayed()) {
@@ -20,6 +22,8 @@ public class SearchTest extends Hooks {
 		}
 		
 		searchBar.singleDestinationQuery("Miami, Florida, United States", "Sat Nov 20 2021", "Fri Nov 26 2021");
+		
+		//To-Do: Detect ad results and skip them
 		
 	}
 
