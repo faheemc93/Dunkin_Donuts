@@ -1,7 +1,4 @@
 package expediatestrunner;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 import org.testng.annotations.Test;
 import expediaproductobjects.SearchBar;
