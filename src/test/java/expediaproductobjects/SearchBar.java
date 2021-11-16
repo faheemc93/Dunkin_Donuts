@@ -1,5 +1,7 @@
 package expediaproductobjects;
 
+import java.util.HashMap;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +27,7 @@ public class SearchBar extends BasePage {
 		driver.findElement(By.xpath(xpath)).sendKeys(Keys.RETURN);
 	}
 	
-	public void singleDestinationQuery(String destination, String checkInDate, String checkOutDate, int[] roomsAndGuests) {
+	public void singleDestinationQuery(String destination, String checkInDate, String checkOutDate) {
 		this.click(destinationField);
 		this.input(destinationField, destination);
 		this.pressEnter(destinationField);
@@ -35,26 +37,9 @@ public class SearchBar extends BasePage {
 		this.click(date.replace("[DATE]", checkOutDate));
 		this.click(applyButton);
 		
-		this.click(guestsButton);
-		this.click(childGuests);
+		
 		
 		this.click(searchButton);
-	}
-	
-	public void determineGuestSplit(String[] roomOne) {
-
-	}
-	
-	public void determineGuestSplit(String[] roomOne, String[] roomTwo) {
-		
-	}
-	
-	public void determineGuestSplit(String[] roomOne, String[] roomTwo, String[] roomThree) {
-		
-	}
-
-	public void determineGuestSplit(String[] roomOne, String[] roomTwo, String[] roomThree, String[] roomFour) {
-		
 	}
 
 }
