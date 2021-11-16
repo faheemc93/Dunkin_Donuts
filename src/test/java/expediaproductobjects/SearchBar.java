@@ -37,8 +37,6 @@ public class SearchBar extends BasePage {
 		this.click(date.replace("[DATE]", checkOutDate));
 		this.click(applyButton);
 		
-		
-		
 		this.click(searchButton);
 	}
 
