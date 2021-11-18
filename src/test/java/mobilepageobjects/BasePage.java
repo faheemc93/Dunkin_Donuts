@@ -4,6 +4,8 @@ import org.openqa.selenium.Keys;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class BasePage {
 	
@@ -18,6 +20,10 @@ public class BasePage {
 		
 	}
 	
+	public void input(String selector) {
+		driver.findElement(MobileBy.AccessibilityId(selector)).click();
+	}
+	
 	public void sleep(int time) {
 		
 		try {
@@ -27,7 +33,7 @@ public class BasePage {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void uiSelector(String selector) {
 		driver.findElement(MobileBy.AndroidUIAutomator(selector)).click();
 	}
@@ -42,4 +48,8 @@ public class BasePage {
 		driver.switchTo().alert().accept();
 	}
 	
+	public void scroll(int fromX, int fromY, int toX, int toY) {
+	    TouchAction touchAction = new TouchAction(driver);
+	    touchAction.longPress(PointOption.point(fromX, fromY)).moveTo(PointOption.point(toX, toY)).release().perform();
+	}
 }
