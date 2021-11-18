@@ -7,7 +7,7 @@ import webproductobjects.signInPage;
 
 public class SignInTest extends Hooks {
 	
-	@Test(enabled=false)
+	@Test(enabled = false)
 	public void test() throws InterruptedException {
 		
 		try {
