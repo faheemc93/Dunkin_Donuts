@@ -5,8 +5,8 @@ import java.util.Map;
 
 import io.appium.java_client.AppiumDriver;
 
-public class LandingPage extends BasePage{
-		
+public class LandingPage extends BasePage {
+	
 	//Contains all options in landing page
 	public Map<String, String> landingPageItems = new HashMap<>() {{
 		put("menu button", "Main Navigation Menu");
@@ -15,7 +15,7 @@ public class LandingPage extends BasePage{
 		put("sign in button", "Sign in - button");
 		put("guest order button", "Guest order - button");
 	}};
-	
+
 	//Contains all options in menu slide
 	public Map<String, String> menuSlideItems = new HashMap<>() {{
 		put("sign up", "new UiSelector().className(\"android.widget.Button\").textContains(\"SIGN UP\")");
@@ -25,8 +25,7 @@ public class LandingPage extends BasePage{
 		put("offers", "new UiSelector().className(\"android.widget.TextView\").textContains(\"OFFERS\")");
 		put("settings", "new UiSelector().className(\"android.widget.TextView\").textContains(\"SETTINGS\")");
 	}};
-	
-	
+
 	public LandingPage(AppiumDriver driver) {
 		super(driver);
 	}
