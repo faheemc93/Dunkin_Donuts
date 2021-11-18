@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-01T21:02:05Z" name="Default suite" finished-at="2021-11-01T21:02:39Z" duration-ms="33801">
+  <suite started-at="2021-11-03T01:14:57Z" name="Default suite" finished-at="2021-11-03T01:15:20Z" duration-ms="23144">
     <groups>
     </groups>
-    <test started-at="2021-11-01T21:02:05Z" name="Default test" finished-at="2021-11-01T21:02:39Z" duration-ms="33801">
-      <class name="mobiletestrunner.MenuTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:mobiletestrunner.MenuTest@6892b3b6]" started-at="2021-11-01T21:02:05Z" name="setup" finished-at="2021-11-01T21:02:14Z" duration-ms="8807" status="PASS">
+    <test started-at="2021-11-03T01:14:57Z" name="Default test" finished-at="2021-11-03T01:15:20Z" duration-ms="23144">
+      <class name="mobiletestrunner.LandingPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:mobiletestrunner.LandingPageTest@6892b3b6]" started-at="2021-11-03T01:14:57Z" name="setup" finished-at="2021-11-03T01:15:10Z" duration-ms="12900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Test1()[pri:0, instance:mobiletestrunner.MenuTest@6892b3b6]" started-at="2021-11-01T21:02:14Z" name="Test1" finished-at="2021-11-01T21:02:34Z" duration-ms="19587" status="PASS">
+        <test-method signature="Test1()[pri:0, instance:mobiletestrunner.LandingPageTest@6892b3b6]" started-at="2021-11-03T01:15:10Z" name="Test1" finished-at="2021-11-03T01:15:14Z" duration-ms="4707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:mobiletestrunner.MenuTest@6892b3b6]" started-at="2021-11-01T21:02:34Z" name="tearDown" finished-at="2021-11-01T21:02:39Z" duration-ms="5387" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:mobiletestrunner.LandingPageTest@6892b3b6]" started-at="2021-11-03T01:15:14Z" name="tearDown" finished-at="2021-11-03T01:15:20Z" duration-ms="5505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mobiletestrunner.MenuTest -->
+      </class> <!-- mobiletestrunner.LandingPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

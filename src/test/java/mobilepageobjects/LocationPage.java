@@ -21,7 +21,6 @@ public class LocationPage extends BasePage{
 	}
 	
 	public void locationFlow() {
-		
 		enableLocationServices();
 		acceptPrompt();
 		searchLocation("queens new york");

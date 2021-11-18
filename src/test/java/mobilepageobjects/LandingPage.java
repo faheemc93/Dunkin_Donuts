@@ -37,13 +37,11 @@ public class LandingPage extends BasePage {
 	}
 			
 	public void navigationMenuFlow() {
-		acceptButton();
 		click(landingPageItems.get("menu button"));
 		uiSelector(menuSlideItems.get("menu"));
 	}
 	
 	public void locationMenuFlow() {
-		acceptButton();
 		click(landingPageItems.get("location button"));
 	}
 }
