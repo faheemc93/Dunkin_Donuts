@@ -6,7 +6,7 @@ import mobilepageobjects.LandingPage;
 
 public class LandingPageTest extends Hooks{
 	
-	@Test
+	@Test(enabled=false)
 	public void Test1() {
 		
 		new NavigateTo(driver,new LandingPage(driver)).start();

@@ -7,7 +7,7 @@ import mobilepageobjects.LocationPage;
 
 public class LocationTest extends Hooks{
 	
-	@Test
+	@Test(enabled=false)
 	public void Test1() {
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.locationMenuFlow();
