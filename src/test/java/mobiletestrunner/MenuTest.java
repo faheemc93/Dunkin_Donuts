@@ -1,6 +1,5 @@
 package mobiletestrunner;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import mobilepageobjects.MenuPage;
