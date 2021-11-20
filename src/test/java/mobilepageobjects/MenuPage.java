@@ -36,7 +36,7 @@ public class MenuPage extends BasePage{
 		put("original blend iced coffee", "new UiSelector().className(\"android.widget.TextView\").textContains(\"ORIGINAL BLEND ICED COFFEE\")");
 		put("cold brew", "new UiSelector().className(\"android.widget.TextView\").textContains(\"COLD BREW\")");
 		put("cold brew with sweet cold foam", "new UiSelector().className(\"android.widget.TextView\").textContains(\"COLD BREW WITH SWEET COLD FOAM\")");
-		put("coconutmilk iced latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"COCONUTMILK ICED LATTE\")");
+		put("coconut milk iced latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"COCONUTMILK ICED LATTE\")");
 		put("iced signature latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"ICED SIGNATURE LATTE\")");
 		put("oatmilk iced latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"OATMILK ICED LATTE\")");
 		put("iced latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"ICED LATTE\")");
@@ -54,7 +54,17 @@ public class MenuPage extends BasePage{
 	public Map<String, String> hotDrinksItems = new HashMap<>() {{
 		put("original blend", "new UiSelector().className(\"android.widget.TextView\").textContains(\"ORIGINAL BLEND\")");
 		put("dunkin midnight", "new UiSelector().className(\"android.widget.TextView\").textContains(\"DUNKIN' MIDNIGHT\")");
-		put("100% guatemalan", "new UiSelector().className(\"android.widget.TextView\").textContains(\"100% GUATEMALAN\")");
+		put("holiday blend", "new UiSelector().className(\"android.widget.TextView\").textContains(\"HOLIDAY BLEND\")");
+		put("signature latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"SIGNATURE LATTE\")");
+		put("latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"LATTE\")");
+		put("cappuccino", "new UiSelector().className(\"android.widget.TextView\").textContains(\"CAPPUCCINO\")");
+		put("macchiato", "new UiSelector().className(\"android.widget.TextView\").textContains(\"MACCHIATO\")");
+		put("americano", "new UiSelector().className(\"android.widget.TextView\").textContains(\"AMERICANO\")");
+		put("espresso", "new UiSelector().className(\"android.widget.TextView\").textContains(\"ESPRESSO\")");
+		put("tea", "new UiSelector().className(\"android.widget.TextView\").textContains(\"TEA\")");
+		put("matcha latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"MATCHA LATTE\")");
+		put("chai latte", "new UiSelector().className(\"android.widget.TextView\").textContains(\"CHAI LATTE\")");
+		put("hot chocolate", "new UiSelector().className(\"android.widget.TextView\").textContains(\"HOT CHOCOLATE\")");
 	}};
 	
 	//Contains all sandwich and wrap options in the "sandwiches & wraps" category page.
@@ -109,6 +119,7 @@ public class MenuPage extends BasePage{
 	public void menuFlow(String category, String item) {
 		//Takes the chosen category from all the menu items as an argument and clicks on that category.
 		click(categoryItems.get(category));
+		
 		//Clicks on desired item based on the chosen category.
 		if (category=="iced drinks") {
 			uiSelector(icedDrinksItems.get(item));

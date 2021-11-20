@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="test1"/>
+          <include name="coldDrinks" invocation-numbers="1"/>
         </methods>
       </class> <!-- mobiletestrunner.MenuTest -->
     </classes>

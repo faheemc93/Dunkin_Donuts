@@ -3,6 +3,7 @@ package mobiletestrunner;
 import io.appium.java_client.AppiumDriver;
 import mobilepageobjects.BasePage;
 import mobilepageobjects.LandingPage;
+import mobilepageobjects.LocationPage;
 import mobilepageobjects.MenuPage;
 
 public class NavigateTo {
@@ -13,11 +14,13 @@ public class NavigateTo {
 	BasePage pageToNavigateTo;
 	LandingPage landingPage;
 	MenuPage menuPage;
+	LocationPage locationPage;
 	
 	public NavigateTo(AppiumDriver driver, BasePage pageToNavigateTo) {
 		
 		this.landingPage = new LandingPage(driver);
 		this.menuPage = new MenuPage(driver);
+		this.locationPage = new LocationPage(driver);
 		this.pageToNavigateTo = pageToNavigateTo;
 		
 	}

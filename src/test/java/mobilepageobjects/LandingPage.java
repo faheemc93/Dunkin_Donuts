@@ -44,4 +44,8 @@ public class LandingPage extends BasePage {
 	public void locationMenuFlow() {
 		click(landingPageItems.get("location button"));
 	}
+	
+	public void signUpFlow() {
+		click(landingPageItems.get("join button"));
+	}
 }
