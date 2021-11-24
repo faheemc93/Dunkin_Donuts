@@ -25,6 +25,5 @@ public class FilterTest extends Hooks {
 		Thread.sleep(5000);
 		filterOptions.starRating(4);			//enter desired star rating for hotel
 		filterOptions.starRating(5);			//enter desired star rating for hotel
-		filterOptions.nightlyPrice(200, 400);	//enter min and max price for hotel
 	}
 }
